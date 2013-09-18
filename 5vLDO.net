@@ -1,0 +1,90 @@
+# EESchema Netlist Version 1.1 created  9/18/2013 2:16:10 PM
+(
+ ( /5239F563 $noname  U1 AP1186K5 {Lib=AP1186K5}
+  (    1 Vout )
+  (    2 GND )
+  (    3 Vout )
+  (    4 Vin )
+  (    5 Vin )
+ )
+ ( /5239F598 $noname  C2 CP1 {Lib=CP1}
+  (    1 Vin )
+  (    2 GND )
+ )
+ ( /5239F618 $noname  C1 CP1 {Lib=CP1}
+  (    1 Vout )
+  (    2 GND )
+ )
+ ( /5239F674 $noname  R1 R {Lib=R}
+  (    1 Vout )
+  (    2 N-000001 )
+ )
+ ( /5239F6D2 $noname  D1 LED {Lib=LED}
+  (    1 N-000001 )
+  (    2 GND )
+ )
+ ( /5239F76F $noname  K1 CONN_3 {Lib=CONN_3}
+  (    1 Vin )
+  (    2 GND )
+  (    3 Vout )
+ )
+ ( /5239F77E $noname  K2 CONN_3 {Lib=CONN_3}
+  (    1 Vin )
+  (    2 GND )
+  (    3 Vout )
+ )
+)
+*
+{ Allowed footprints by component:
+$component C2
+ CP*
+ SM*
+$endlist
+$component C1
+ CP*
+ SM*
+$endlist
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component D1
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$endfootprintlist
+}
+{ Pin List by Nets
+Net 1 "" ""
+ R1 2
+ D1 1
+Net 2 "GND" "GND"
+ U1 2
+ C2 2
+ C1 2
+ D1 2
+ K2 2
+ K1 2
+Net 3 "Vin" "Vin"
+ U1 5
+ C2 1
+ K1 1
+ U1 4
+ K2 1
+Net 4 "Vout" "Vout"
+ C1 1
+ U1 1
+ U1 3
+ K2 3
+ R1 1
+ K1 3
+}
+#End
